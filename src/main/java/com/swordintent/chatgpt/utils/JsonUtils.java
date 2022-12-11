@@ -1,4 +1,4 @@
-package org.swordintent.chatgpt.utils;
+package com.swordintent.chatgpt.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

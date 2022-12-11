@@ -1,10 +1,10 @@
-package org.swordintent.chatgpt;
+package com.swordintent.chatgpt;
 
-import org.swordintent.chatgpt.client.DataClient;
-import org.swordintent.chatgpt.client.TokenInterceptor;
-import org.swordintent.chatgpt.protocol.ChatGptConfig;
-import org.swordintent.chatgpt.protocol.ChatRequest;
-import org.swordintent.chatgpt.protocol.ChatResponse;
+import com.swordintent.chatgpt.client.DataClient;
+import com.swordintent.chatgpt.client.TokenInterceptor;
+import com.swordintent.chatgpt.protocol.ChatGptConfig;
+import com.swordintent.chatgpt.protocol.ChatRequest;
+import com.swordintent.chatgpt.protocol.ChatResponse;
 
 public class ChatgptClientImpl implements ChatgptClient{
 

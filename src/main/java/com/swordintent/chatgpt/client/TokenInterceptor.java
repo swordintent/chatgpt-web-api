@@ -1,10 +1,10 @@
-package org.swordintent.chatgpt.client;
+package com.swordintent.chatgpt.client;
 
+import com.swordintent.chatgpt.protocol.ChatGptConfig;
+import com.swordintent.chatgpt.utils.JsonUtils;
 import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
-import org.swordintent.chatgpt.protocol.ChatGptConfig;
-import org.swordintent.chatgpt.utils.JsonUtils;
 
 import java.io.IOException;
 

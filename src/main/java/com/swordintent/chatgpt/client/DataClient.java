@@ -1,7 +1,7 @@
-package org.swordintent.chatgpt.client;
+package com.swordintent.chatgpt.client;
 
+import com.swordintent.chatgpt.utils.JsonUtils;
 import okhttp3.*;
-import org.swordintent.chatgpt.utils.JsonUtils;
 
 import javax.net.ssl.*;
 import java.io.IOException;

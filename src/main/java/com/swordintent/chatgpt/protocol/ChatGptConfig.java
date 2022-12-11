@@ -1,4 +1,4 @@
-package org.swordintent.chatgpt.protocol;
+package com.swordintent.chatgpt.protocol;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.Builder;
