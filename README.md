@@ -5,11 +5,12 @@ integrate with https://github.com/acheong08/ChatGPT
 
 # How TO
 
-### Start a python server
+### Start a python server(python >= 3.7)
 
 you will find it in `src/main/resources/server.py`
 
 ```
+    pip3 install flask flask-restful
     pip3 install revChatGPT --upgrade
     python3 server.py
 ```
