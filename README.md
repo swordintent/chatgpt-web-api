@@ -1,7 +1,7 @@
 # chatgpt-web-api
 **A Java Version ChatGPT SDK** 
 
-integrate with [acheong08/ChatGPT](https://github.com/acheong08/ChatGPT)
+integrate with [acheong08/ChatGPT](https://github.com/acheong08/ChatGPT), **now error, wait**.
 
 # How TO
 
