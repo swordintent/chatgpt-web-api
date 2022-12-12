@@ -1,9 +1,11 @@
 # chatgpt-web-api
-**A Java Version ChatGPT SDK** [中文](https://github.com/swordintent/chatgpt-web-api/wiki/%E7%AE%80%E4%BB%8B)
+**A Java Version ChatGPT SDK** 
 
 integrate with [acheong08/ChatGPT](https://github.com/acheong08/ChatGPT)
 
 # How TO
+
+[中文](https://github.com/swordintent/chatgpt-web-api/wiki/%E7%AE%80%E4%BB%8B)
 
 ### Start a python server(python >= 3.7)
 
