@@ -1,13 +1,13 @@
 # chatgpt-web-api
 **A Java Version ChatGPT SDK**
 
-integrate with https://github.com/acheong08/ChatGPT 
+integrate with [acheong08/ChatGPT](https://github.com/acheong08/ChatGPT)
 
 # How TO
 
 ### Start a python server(python >= 3.7)
 
-you will find it in `src/main/resources/server.py`
+you will find it in `src/main/resources/server.py`, and `acheong08/ChatGPT` is active，you need run `pip3 install revChatGPT --upgrade` frequently.
 
 ```
     pip3 install flask flask-restful
@@ -20,7 +20,9 @@ by default, it listen on http://127.0.0.1:5000
 
 ### Import maven jar
 
+https://search.maven.org/artifact/com.swordintent.chatgpt/web-api/
 
+Maven
 ```
     <dependency>
       <groupId>com.swordintent.chatgpt</groupId>
@@ -28,6 +30,13 @@ by default, it listen on http://127.0.0.1:5000
       <version>1.0.0</version>
     </dependency>
 ```
+
+Gradle
+
+```
+    implementation 'com.swordintent.chatgpt:web-api:1.0.0'
+```
+
 
 ### Enjoy it in your project
 
@@ -46,7 +55,7 @@ by default, it listen on http://127.0.0.1:5000
     chatgptClient.init(address, chatGptConfig);
 ```
 
-* Advanced: you also can set `session_token` or `Authorization`, when you init, but it's not recommend.
+* Advanced: you also can set `session_token` or `Authorization` when you init, for OpenAI update auth reasons, it's not recommend.
 
 2. then you can invoke chat `chatgptClient.chat(request)` method to chat. 
 
@@ -83,9 +92,9 @@ when you want reset multiple rounds set them to null too.
 
 3. **Notice**.
 
-* For multiple rounds reason, when you invoke `chatgptClient.chat(request)`, we will **DO NOT** log in openai every times.
+* For one account to support multi user and multiple rounds reason, when you invoke `chatgptClient.chat(request)`, we will **DO NOT** log in openai every times, we will **ONLY** log in when you invoke `chatgptClient.init(address, chatGptConfig)` method, and then use it globally.
 
-* So the login status may sometimes be invalidated by openai, then you must invoke init method `chatgptClient.chat(request)` again.
+* So the login status may sometimes be invalidated by OpenAI, then you must invoke init method `chatgptClient.chat(request)` again.
 
 
 
