@@ -1,6 +1,8 @@
 import json
+import pickle
+import base64
 
-from revChatGPT.revChatGPT import Chatbot
+from revChatGPT.Official import Chatbot
 from flask import Flask
 from flask_restful import reqparse, Api, Resource
 
@@ -22,12 +24,20 @@ class Chat(Resource):
     def post(self):
         args = parser.parse_args()
         print(args)
+
         prompt = args['prompt']
         conversation_id = args['conversation_id']
-        parent_id = args['parent_id']
         config = json.loads(args['chatgpt-config'])
-        chatbot = Chatbot(config, conversation_id, parent_id, refresh=False)
-        response = chatbot.get_chat_response(prompt)
+
+        if conversation_id is None:
+            chatbot = Chatbot(api_key=config['password'])
+        else:
+            chatbot = pickle.loads(base64.b64decode(conversation_id))
+        result = chatbot.ask(prompt)
+        encode = base64.b64encode(pickle.dumps(chatbot)).decode(encoding='ascii')
+        print("chatbot history", chatbot.prompt.chat_history)
+        ret = {'message': result["choices"][0]["text"], 'conversation_id': encode}
+        response = ret
         print(response)
         return response, 200
 
@@ -38,8 +48,8 @@ class Login(Resource):
         args = parser.parse_args()
         print(args)
         config = json.loads(args['chatgpt-config'])
-        chatbot = Chatbot(config, refresh=True)
-        response = chatbot.config
+        chatbot = Chatbot(api_key=config['password'])
+        response = config
         print(response)
         return response, 200
 
