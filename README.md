@@ -3,17 +3,27 @@
 
 integrate with [acheong08/ChatGPT](https://github.com/acheong08/ChatGPT), use official Api of openAI(2023.2.4).
 
+# update
+
+`2023.2.14 for the acheong08/ChatGPT update reason. you need use this project in this step(the model is not free, but you have $18 free quota)`
+
+```
+pip3 install revChatGPT==1.2.2
+export GPT_ENGINE="text-davinci-003"
+```
+
 # How TO
 
 [中文](https://github.com/swordintent/chatgpt-web-api/wiki/%E7%AE%80%E4%BB%8B)
 
 ### Start a python server(python >= 3.7)
 
-you will find it in `src/main/resources/server.py`, and `acheong08/ChatGPT` is active，you need run `pip3 install revChatGPT --upgrade` frequently.
+you will find it in `src/main/resources/server.py`, and run:
 
 ```
     pip3 install flask flask-restful
-    pip3 install revChatGPT --upgrade
+    pip3 install revChatGPT==1.2.2
+    export GPT_ENGINE="text-davinci-003"
     python3 server.py
 ```
 
