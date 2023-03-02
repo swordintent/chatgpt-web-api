@@ -1,11 +1,11 @@
 # chatgpt-web-api
 **A Java Version ChatGPT SDK** 
 
-integrate with [acheong08/ChatGPT](https://github.com/acheong08/ChatGPT), use official Api of openAI(2023.2.4).
+integrate with [acheong08/ChatGPT](https://github.com/acheong08/ChatGPT), use official Api of openAI(2023.3.2).
 
 # update
 
-`2023.2.14 for the acheong08/ChatGPT update reason. you need use this project in this step(the model is not free, but you have $18 free quota)`
+`2023.3.2 use official api, model is not free, but you have $18 free quota`
 
 ```
 pip3 install --upgrade revChatGPT
