@@ -8,8 +8,7 @@ integrate with [acheong08/ChatGPT](https://github.com/acheong08/ChatGPT), use of
 `2023.2.14 for the acheong08/ChatGPT update reason. you need use this project in this step(the model is not free, but you have $18 free quota)`
 
 ```
-pip3 install revChatGPT==1.2.2
-export GPT_ENGINE="text-davinci-003"
+pip3 install --upgrade revChatGPT
 ```
 
 # How TO
@@ -22,8 +21,7 @@ you will find it in `src/main/resources/server.py`, and run:
 
 ```
     pip3 install flask flask-restful
-    pip3 install revChatGPT==1.2.2
-    export GPT_ENGINE="text-davinci-003"
+    pip3 install --upgrade revChatGPT
     python3 server.py
 ```
 
