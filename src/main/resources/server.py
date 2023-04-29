@@ -1,6 +1,7 @@
 import json
 import pickle
 import base64
+import uuid
 
 from revChatGPT.V3 import Chatbot
 from flask import Flask
@@ -31,12 +32,14 @@ class Chat(Resource):
 
         if conversation_id is None:
             chatbot = Chatbot(api_key=config['password'])
+            conversation_id = str(uuid.uuid1())
         else:
-            chatbot = pickle.loads(base64.b64decode(conversation_id))
+            chatbot = Chatbot(api_key=config['password'])
+            chatbot.load(conversation_id)
         result = chatbot.ask(prompt)
-        encode = base64.b64encode(pickle.dumps(chatbot)).decode(encoding='ascii')
+        chatbot.save(conversation_id)
         print("result", chatbot.conversation)
-        ret = {'message': result, 'conversation_id': encode}
+        ret = {'message': result, 'conversation_id': conversation_id}
         response = ret
         print(response)
         return response, 200
